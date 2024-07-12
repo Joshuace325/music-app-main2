@@ -277,3 +277,36 @@ music.addEventListener("pause", () => {
   beatVisualizer.classList.remove("active");
   document.getElementById("music-container").classList.remove("neon-glow");
 });
+
+// Reset the current time and duration display
+function resetTimeDisplay() {
+  currentTimeEl.textContent = "0:00";
+  durationEl.textContent = "0:00";
+}
+
+// Update the duration display once metadata is loaded
+music.addEventListener('loadedmetadata', () => {
+  const formatTime = (time) => String(Math.floor(time)).padStart(2, "0");
+  const durationMinutes = formatTime(Math.floor(music.duration / 60));
+  const durationSeconds = formatTime(Math.floor(music.duration % 60));
+  durationEl.textContent = `${durationMinutes}:${durationSeconds}`;
+});
+
+// Modify the loadMusic function to reset the time display
+function loadMusic(song) {
+  // Reset time display to default values
+  resetTimeDisplay();
+
+  // Load the new song
+  music.src = song.path;
+  title.textContent = song.displayName;
+  artist.textContent = song.artist;
+  image.src = song.cover;
+  background.src = song.cover;
+
+  // Set volume to the last used volume
+  music.volume = previousVolume;
+  volumeSlider.value = previousVolume;
+  volumePercentage.textContent = `${Math.round(previousVolume * 100)}%`;
+  updateVolumeIcon(previousVolume);
+}
