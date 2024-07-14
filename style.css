@@ -8,7 +8,7 @@ body {
   margin: 0;
   font-family: "Ubuntu", sans-serif;
   font-size: 12px;
-  min-height: 100vh;
+  min-height: 100vh;  
   display: flex;
   align-items: center;
   justify-content: center;
@@ -273,4 +273,191 @@ input[type="range"]::-moz-range-thumb {
   color: #ff0000; /* Highlight repeat button when active */
   transform: rotate(180deg); /* Rotate 180 degrees */
   transition: transform 0.5s ease-in-out;
+}
+
+/* Responsive Styles */
+@media (max-width: 1200px) {
+  .container {
+    width: 350px;
+    height: 450px;
+  }
+
+  .player-img {
+    width: 250px;
+    height: 250px;
+    top: -30px;
+    left: 50px;
+  }
+
+  .player-img img {
+    border-radius: 15px;
+  }
+}
+
+@media (max-width: 992px) {
+  .container {
+    width: 300px;
+    height: 400px;
+  }
+
+  .player-img {
+    width: 220px;
+    height: 220px;
+    top: -20px;
+    left: 40px;
+  }
+
+  h2 {
+    font-size: 22px;
+  }
+
+  h3 {
+    font-size: 16px;
+  }
+
+  .player-progress {
+    margin: 30px 20px 25px;
+  }
+
+  .player-controls {
+    gap: 30px;
+  }
+
+  .fa-solid {
+    font-size: 18px;
+  }
+
+  .play-button {
+    font-size: 40px;
+  }
+
+  #volume-slider {
+    width: 80px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: 250px;
+    height: 350px;
+  }
+
+  .player-img {
+    width: 200px;
+    height: 200px;
+    top: -10px;
+    left: 25px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  h3 {
+    font-size: 14px;
+  }
+
+  .player-progress {
+    margin: 20px 10px 20px;
+  }
+
+  .player-controls {
+    gap: 20px;
+  }
+
+  .fa-solid {
+    font-size: 16px;
+  }
+
+  .play-button {
+    font-size: 36px;
+  }
+
+  #volume-slider {
+    width: 70px;
+  }
+}
+
+@media (max-width: 576px) {
+  .container {
+    width: 200px;
+    height: 300px;
+  }
+
+  .player-img {
+    width: 150px;
+    height: 150px;
+    top: 0;
+    left: 25px;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+  h3 {
+    font-size: 12px;
+  }
+
+  .player-progress {
+    margin: 10px 5px 10px;
+  }
+
+  .player-controls {
+    gap: 10px;
+  }
+
+  .fa-solid {
+    font-size: 14px;
+  }
+
+  .play-button {
+    font-size: 32px;
+  }
+
+  #volume-slider {
+    width: 60px;
+  }
+}
+
+@media (max-width: 400px) {
+  .container {
+    width: 180px;
+    height: 280px;
+  }
+
+  .player-img {
+    width: 130px;
+    height: 130px;
+    top: 0;
+    left: 25px;
+  }
+
+  h2 {
+    font-size: 16px;
+  }
+
+  h3 {
+    font-size: 10px;
+  }
+
+  .player-progress {
+    margin: 5px 5px 5px;
+  }
+
+  .player-controls {
+    gap: 5px;
+  }
+
+  .fa-solid {
+    font-size: 12px;
+  }
+
+  .play-button {
+    font-size: 28px;
+  }
+
+  #volume-slider {
+    width: 50px;
+  }
 }
